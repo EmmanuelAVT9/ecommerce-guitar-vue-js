@@ -1,12 +1,18 @@
 <script setup>
-    import { ref, reactive} from 'vue'
+    import { ref, reactive, onMounted } from 'vue'
     import { db } from './data/guitarras.js'
 
+    const guitarras = ref([])
     const state = reactive({
-        guitarras: db
+        guitarras: []
     })
 
-    console.log(state.guitarras)
+    onMounted(() => {
+        // console.log('Componente Listo')
+        guitarras.value = db;
+        state.guitarras = db;
+    })
+
 </script>
 
 <template>
