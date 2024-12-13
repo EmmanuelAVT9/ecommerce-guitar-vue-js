@@ -11,7 +11,7 @@ const props = defineProps({
     }
 });
 
-defineEmits(['incrementar'])
+defineEmits(['agregar-carrito'])
 
 const loading = ref(true);
 
@@ -49,7 +49,7 @@ setTimeout(() => {
                 <button 
                     type="button" 
                     class="btn btn-dark w-100"
-                    @click="$emit('incrementar')"
+                    @click="$emit('agregar-carrito')"
                 >Agregar al Carrito</button>
             </div>
         </template>

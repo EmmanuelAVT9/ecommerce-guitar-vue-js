@@ -11,9 +11,9 @@
         guitarras.value = db;
     })
     
-    const incrementar = () => {
+    const agregarCarrito = () => {
         //numero.value++
-        alert('Diste click')
+        console.log('agregando...')
     }
 
 </script>
@@ -99,7 +99,7 @@
             <CardGuitar
                 v-for="guitarra in guitarras"
                 :guitarra="guitarra"
-                @incrementar="incrementar"
+                @agregar-carrito="agregarCarrito"
             />
         </div>
     </main>
