@@ -11,9 +11,7 @@ const props = defineProps({
     }
 });
 
-const incrementar = () => {
-    numero.value++
-}
+defineEmits(['incrementar'])
 
 const loading = ref(true);
 
@@ -51,7 +49,7 @@ setTimeout(() => {
                 <button 
                     type="button" 
                     class="btn btn-dark w-100"
-                    v-on:click="incrementar"
+                    @click="$emit('incrementar')"
                 >Agregar al Carrito</button>
             </div>
         </template>

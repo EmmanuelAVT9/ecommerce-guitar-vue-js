@@ -11,6 +11,10 @@
         guitarras.value = db;
     })
     
+    const incrementar = () => {
+        //numero.value++
+        alert('Diste click')
+    }
 
 </script>
 
@@ -95,6 +99,7 @@
             <CardGuitar
                 v-for="guitarra in guitarras"
                 :guitarra="guitarra"
+                @incrementar="incrementar"
             />
         </div>
     </main>
