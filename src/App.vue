@@ -6,9 +6,11 @@
     import CardGuitar from './components/CardGuitar.vue'
 
     const guitarras = ref([])
+
     onMounted(() => {
         guitarras.value = db;
     })
+    
 
 </script>
 
