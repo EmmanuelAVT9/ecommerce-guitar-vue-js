@@ -6,13 +6,15 @@
     import CardGuitar from './components/CardGuitar.vue'
 
     const guitarras = ref([])
+    const carrito = ref([])
 
     onMounted(() => {
         guitarras.value = db;
     })
     
     const agregarCarrito = (guitarra) => {
-        console.log('agregando...', guitarra)
+        guitarra.cantidad = 1;
+        carrito.value.push(guitarra);
     }
 
 </script>
